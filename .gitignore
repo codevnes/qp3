@@ -1,5 +1,7 @@
 # Dependencies
 node_modules/
+custom_modes
+.cursor
 npm-debug.log
 yarn-error.log
 yarn-debug.log
