@@ -72,7 +72,7 @@
 								</div>
 							</div>
 							<div class="col-sm-6 d-sm-block d-none">
-								<h2 id="callbacks" class="title">QP GREEN PACK</h2>
+								<h2 id="callbacks" class="title">QP GREEN PARK</h2>
 							</div>
 							<div class="col-sm-3 col-5">
 								<div class="menu-box" id="showmenu">

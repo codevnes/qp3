@@ -11,7 +11,7 @@ get_header();
 <div id="fullpage">
     <ul id="menu">
         <li data-menuanchor="anchor-video" class="active"><a href="#anchor-video"><span class="menu-nb">01</span><span
-                    class="menu-tt"> QP GREEN PACK </span></a></li>
+                    class="menu-tt"> QP GREEN PARK </span></a></li>
         <li data-menuanchor="anchor-about"><a href="#anchor-about"><span class="menu-nb">02</span><span class="menu-tt">
                     Giới thiệu </span></a></li>
         <li data-menuanchor="anchor-product"><a href="#anchor-product"><span class="menu-nb">03</span><span
