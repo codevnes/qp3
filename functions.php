@@ -14,6 +14,7 @@ if (!defined('_S_VERSION')) {
  * Include custom post types and taxonomies
  */
 require get_template_directory() . '/inc/post-types/property.php';
+require get_template_directory() . '/inc/media-library.php';
 
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -167,6 +168,11 @@ function QP3_scripts()
     // Category page functionality
     if (is_category()) {
         wp_enqueue_script('category-js', get_template_directory_uri() . '/assets/js/category.js', array('jquery'), '1.0', true);
+    }
+    
+    // Media Library page functionality
+    if (is_page_template('page-media-library.php')) {
+        wp_enqueue_script('media-library-js', get_template_directory_uri() . '/assets/js/media-library.js', array('jquery', 'fancybox-js'), '1.0', true);
     }
 
     // Main script with Ajax support

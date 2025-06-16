@@ -10,7 +10,7 @@
     <div class="wrap">
         <h2 class="heading d-none"><span>QP GREEN PACK</span></h2>
         <div class="video-intro text-center">
-            <a class="d-block btn-video" data-fancybox href="https://www.youtube.com/watch?v=Cwqru1WszKY">
+            <a class="d-block btn-video" data-fancybox href="https://www.youtube.com/watch?v=8LZXC6Q6R0A">
                 <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/uploads/2022/07/img-video.svg" alt="Image Intro">
                 <span class="icon-video">
                     <span class="inner">
