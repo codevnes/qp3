@@ -42,28 +42,31 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-
-
-
-const slider = new Swiper('.slider--location.swiper', {
-    slidesPerView: 2.4,
-    spaceBetween: 20,
-    loop: true,
-    navigation: {
-        nextEl: '.slider--location .swiper-button-next',
-        prevEl: '.slider--location .swiper-button-prev'
-    },
-    pagination: {
-        el: '.slider--location .swiper-pagination',
-        clickable: true
-    },
-    breakpoints: {
-        768: {
-            slidesPerView: 1.2
-        },
-        1024: {
-            slidesPerView: 2.4
-        }
+    // Initialize Location Slider
+    if (document.querySelector('.slider--location')) {
+        const locationSlider = new Swiper('.slider--location', {
+            slidesPerView: 1.2,
+            spaceBetween: 20,
+            loop: true,
+            navigation: {
+                nextEl: '.slider--location .swiper-button-next',
+                prevEl: '.slider--location .swiper-button-prev'
+            },
+            pagination: {
+                el: '.slider--location .swiper-pagination',
+                clickable: true
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1
+                },
+                768: {
+                    slidesPerView: 1.2
+                },
+                1024: {
+                    slidesPerView: 1.5
+                }
+            }
+        });
     }
-});
 }); 

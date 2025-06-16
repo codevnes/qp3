@@ -27,8 +27,9 @@
 									<a href="#"><i class="fa-regular fa-paper-plane 2x"></i> Đăng ký nhận tin</a>
 								</li>
 								<li>
-									<a href="tel:0813 908 901"><i class="fa-regular fa-phone-rotary 2x"></i> 0813 908
-										901</a>
+									<a href="tel:(028) 35 28 28 28">
+										<i class="fa-regular fa-phone-rotary 2x"></i>(028) 35 28 28 28
+									</a>
 								</li>
 							</ul>
 						</div>

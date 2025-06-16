@@ -10,22 +10,15 @@
     <div class="container">
         <div class="wrap">
             <h2 class="heading d-lx-none"><span>Liên kết vùng</span></h2>
-            <div class="row align-items-center">
-                <div class="col-3">
-                    <h2 class="location-link__title">Liên kết vùng</h2>
+            <div class="row">
+                <div class="col-lx-3 text-center">
                     <div class="location-link__image">
                         <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/logo.svg"
                             alt="QP Group">
                     </div>
                 </div>
-                <div class="col-9">
-
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lx-3"></div>
                 <div class="col-lx-9">
-                    <div class="slider slider--location">
+                    <div class="slider slider--location swiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <div class="location-item">
@@ -96,12 +89,10 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="swiper-pagination"></div>
                     </div>
                 </div>
             </div>
         </div>
-
-
-
     </div>
 </div>
