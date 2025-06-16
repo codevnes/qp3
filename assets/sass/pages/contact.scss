@@ -1,0 +1,495 @@
+/*--------------------------------------------------------------
+# Contact Page Styles
+--------------------------------------------------------------*/
+@import '../abstracts/variables';
+
+/*--------------------------------------------------------------
+# Custom Css
+--------------------------------------------------------------*/
+.page-template-page-contact {
+    .site-content {
+        position: relative;
+
+        &:before {
+            content: '';
+            background: url('./assets/img/icon/before-contact.svg') left center no-repeat;
+            background-size: contain;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
+
+/* Section Contact */
+.section-contact {
+    &__wrap {
+        position: relative;
+    }
+
+    &__heading {
+        font-size: 18px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+
+        @media only screen and (min-width: 1200px) {
+            font-size: 30px;
+            margin-bottom: 24px;
+        }
+    }
+
+    &__content {
+        margin-bottom: 30px;
+
+        @media only screen and (min-width: 1100px) {
+            margin-bottom: 0;
+        }
+    }
+
+    &__form {
+        p {
+            margin-bottom: 0;
+        }
+
+        .wpcf7 {
+            border-radius: 16px;
+            padding: 24px;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+
+            .wpcf7-form {
+                position: relative;
+                z-index: 3;
+            }
+
+            @media only screen and (min-width: 1600px) {
+                padding: 32px 48px;
+            }
+
+            &:after {
+                content: '';
+                background: linear-gradient(to bottom, rgba(255, 207, 138, 0.2) 2.06%, rgba(255, 255, 255, 0) 95.79%);
+                border-radius: 16px;
+                backdrop-filter: blur(5px);
+                -webkit-backdrop-filter: blur(5px);
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+            }
+
+            &:before {
+                content: '';
+                background: url('./assets/img/icon/ns-2.svg') center no-repeat;
+                background-size: cover;
+                opacity: 0.28;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                pointer-events: none;
+                z-index: 2;
+            }
+
+            .wpcf7-not-valid-tip {
+                margin: 5px 0;
+                position: absolute;
+                right: 10px;
+                top: 46%;
+                transform: translateY(-50%);
+            }
+
+            .form-contact {
+                h3 {
+                    font-size: 20px;
+                    line-height: 1.5;
+                    margin-bottom: 15px;
+
+                    @media only screen and (min-width: 1100px) {
+                        font-size: 24px;
+                    }
+
+                    @media only screen and (min-width: 1200px) {
+                        font-size: 30px;
+                        margin-bottom: 24px;
+                    }
+                }
+
+                .form-title {
+                    font-weight: bold;
+                    font-size: 18px;
+                    line-height: 1.5;
+                    margin-bottom: 5px;
+                }
+
+                .wpcf7-form-control-wrap {
+                    position: relative;
+
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        z-index: -1;
+                        inset: 0;
+                        background: linear-gradient(to right, #F5A764 0%, #F5BB63 50%, #926037 100%);
+                        padding: 1px;
+                        border-radius: 8px;
+                        -webkit-mask:
+                            linear-gradient(#fff 0 0) content-box,
+                            linear-gradient(#fff 0 0);
+                        mask:
+                            linear-gradient(#fff 0 0) content-box,
+                            linear-gradient(#fff 0 0);
+                        -webkit-mask-composite: xor;
+                        mask-composite: exclude;
+                    }
+                }
+
+                .form-control {
+                    height: 45px;
+                    color: #CCBEAC;
+                    border: 0;
+                    background: transparent;
+
+                    &::placeholder {
+                        color: #CCBEAC;
+                    }
+
+                    @media only screen and (min-width: 1600px) {
+                        height: 52px;
+                    }
+                }
+
+                .form-submit {
+                    margin-top: 5px;
+
+                    @media only screen and (min-width: 1400px) {
+                        margin-top: 17px;
+                    }
+
+                    span {
+                        display: inline-block;
+                        position: relative;
+
+                        &:before {
+                            content: "";
+                            position: absolute;
+                            z-index: -1;
+                            inset: 0;
+                            background: linear-gradient(to right, #F5A764 0%, #F5BB63 50%, #926037 100%);
+                            padding: 1px;
+                            border-radius: 8px;
+                            -webkit-mask:
+                                linear-gradient(#fff 0 0) content-box,
+                                linear-gradient(#fff 0 0);
+                            mask:
+                                linear-gradient(#fff 0 0) content-box,
+                                linear-gradient(#fff 0 0);
+                            -webkit-mask-composite: xor;
+                            mask-composite: exclude;
+                        }
+                    }
+
+                    .wpcf7-spinner {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        margin: 0;
+                    }
+
+                    .btn-submit {
+                        background: linear-gradient(180deg, rgba(147, 96, 54, 0.64) 0%, rgba(245, 167, 100, 0) 100%);
+                        border-radius: 8px;
+                        width: 140px;
+                        height: 45px;
+                        font-weight: bold;
+                        border: 0px solid;
+                        color: #FFF;
+
+                        @media only screen and (min-width: 1600px) {
+                            height: 52px;
+                            width: 170px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Company Card */
+.company-card {
+    border-radius: 16px;
+    padding: 24px;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+
+    @media only screen and (min-width: 1600px) {
+        padding: 32px 48px;
+    }
+
+    &__inner {
+        position: relative;
+        z-index: 3;
+    }
+
+    &__name {
+        font-size: 18px;
+        line-height: 1.5;
+        margin-bottom: 10px;
+
+        @media only screen and (min-width: 576px) {
+            font-size: 22px;
+        }
+
+        @media only screen and (min-width: 1100px) {
+            font-size: 24px;
+        }
+
+        @media only screen and (min-width: 1200px) {
+            font-size: 26px;
+        }
+
+        @media only screen and (min-width: 1400px) {
+            font-size: 28px;
+        }
+    }
+
+    &:after {
+        content: '';
+        background: linear-gradient(to bottom, rgba(255, 207, 138, 0.2) 2.06%, rgba(255, 255, 255, 0) 95.79%);
+        border-radius: 16px;
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+
+    &:before {
+        content: '';
+        background: url('./assets/img/icon/ns-2.svg') center no-repeat;
+        background-size: cover;
+        opacity: 0.28;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        z-index: 2;
+    }
+
+    &__item {
+        display: flex;
+        align-items: flex-start;
+        padding: 2px 0;
+        border-bottom: 1px solid #746B61;
+        position: relative;
+
+        @media only screen and (min-width: 576px) {
+            padding: 14px 0;
+        }
+
+        @media only screen and (min-width: 1100px) {
+            padding: 16px 0;
+        }
+
+        @media only screen and (min-width: 1200px) {
+            padding: 18px 0;
+        }
+
+        @media only screen and (min-width: 1400px) {
+            padding: 20px 0;
+        }
+
+        &--tax {
+            border-bottom: none;
+        }
+    }
+
+    &__icon {
+        font-size: 20px;
+        color: #F5A764;
+        width: 24px;
+        margin-right: 16px;
+        margin-top: 3px;
+    }
+
+    &__info {
+        flex: 1;
+    }
+
+    &__label {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 2px;
+    }
+
+    &__text {
+        font-weight: normal;
+        display: block;
+        line-height: 1.4;
+    }
+
+    &__social {
+        display: flex;
+        gap: 12px;
+        margin-top: 16px;
+    }
+
+    &__social-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background-color: rgba(245, 167, 100, 0.2);
+        position: relative;
+        transition: all 0.3s ease;
+        color: #F5A764;
+        font-size: 16px;
+
+        &:hover {
+            background-color: rgba(245, 167, 100, 0.4);
+            color: #926037;
+        }
+    }
+}
+
+.wpcf7-response-output {
+    color: $text-color !important;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/*--------------------------------------------------------------
+# Responsive
+--------------------------------------------------------------*/
+@media only screen and (max-width: 767px) {
+    .company-card {
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (min-width: 576px) {
+    .company-info {
+        .company-item {
+            padding: 18px 0 18px 40px;
+        }
+
+        .company-name {
+            font-size: 22px;
+        }
+    }
+}
+
+@media only screen and (min-width: 850px) {}
+
+@media only screen and (min-width: 992px) {}
+
+@media only screen and (min-width: 1100px) {
+    .contact-company {
+        .wpcf7 {
+            .form-contact {
+                h3 {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+
+    .company-info {
+        .company-item {
+            padding: 20px 0 20px 40px;
+        }
+
+        .company-name {
+            font-size: 24px;
+        }
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .contact-company {
+        .wpcf7 {
+            .form-contact {
+                h3 {
+                    font-size: 30px;
+                    margin-bottom: 24px;
+                }
+            }
+        }
+    }
+
+    .company-info {
+        .company-item {
+            padding: 26px 0 26px 40px;
+        }
+
+        .company-name {
+            font-size: 26px;
+        }
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .contact-company {
+        .wpcf7 {
+            .form-contact {
+                .form-submit {
+                    margin-top: 17px;
+                }
+            }
+        }
+    }
+
+    .company-info {
+        .company-item {
+            padding: 32px 0 32px 40px;
+        }
+
+        .company-name {
+            font-size: 30px;
+        }
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+    .contact-company {
+        .wpcf7 {
+            .form-contact {
+                .form-submit {
+                    .btn-submit {
+                        height: 52px;
+                        width: 170px;
+                    }
+                }
+
+                .form-control {
+                    height: 52px;
+                }
+            }
+        }
+    }
+}

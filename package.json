@@ -1,0 +1,16 @@
+{
+  "name": "qp3-theme",
+  "version": "1.0.0",
+  "description": "WordPress theme for QP3",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass assets/sass/main.scss:main.css",
+    "dev": "sass --watch assets/sass/main.scss:main.css",
+    "build": "sass --no-source-map --style=compressed assets/sass/main.scss:main.min.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.69.5"
+  }
+} 

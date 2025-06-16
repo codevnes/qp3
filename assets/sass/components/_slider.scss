@@ -1,0 +1,93 @@
+/* Slideshow container */
+/* On smaller screens, decrease text size */
+#slider {
+	position: relative;
+	margin: 0 auto 30px;
+    overflow: hidden;
+    background: url(assets/img/ajax-loading.gif) center center no-repeat, $white;
+    .slider-box {
+        padding-top: 31.25%;
+        display: block;
+        cursor: pointer;
+        overflow: hidden;
+        position: relative;
+    }
+    .slider-thumbnail {
+        height: 100%;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .slider-container {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 1s ease;
+        -webkit-transition: opacity 1s ease;
+        &.slick-initialized {
+            visibility: visible;
+            opacity: 1;    
+        }
+        .slick-slide {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+    .slick-slider {
+        padding-bottom: 0 !important;
+        .slick-arrow {
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            background: rgba(255, 255, 255, 1);
+            border-radius: 3px;
+            @include custom-hidden;
+            transition: all 0.25s ease-in-out;
+            &:hover {
+                background: $primary-color;
+                &:before {
+                    color: $text-color;
+                }
+            }
+            &.slick-disabled {
+                opacity: 0.5 !important;
+            }
+            &.slick-prev {
+                left: 20px;
+                transform: translate(-20px,-50%);
+            }
+            &.slick-next {
+                right: 20px;
+                transform: translate(20px,-50%);
+            }
+        }
+        &:hover {
+            .slick-arrow {
+                @include custom-visible;
+                transform: translate(0px,-50%);
+            }
+        }
+    }
+    .slider-caption {
+		font-size: 15px;
+		padding: 8px 12px;
+		position: absolute;
+		top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+		width: 100%;
+		text-align: center;
+        a {
+            color: $text-color;
+        }
+	}
+	.fade {
+		animation-name: fade;
+		animation-duration: 0.5s;
+        animation-fill-mode: both;
+        animation-timing-function: linear;
+	}
+}

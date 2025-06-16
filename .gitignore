@@ -1,0 +1,20 @@
+# Dependencies
+node_modules/
+npm-debug.log
+yarn-error.log
+yarn-debug.log
+.sass-cache/
+
+# Generated files
+assets/css/main.css
+assets/css/main.css.map
+assets/css/main.min.css
+
+# Editor directories and files
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw? 
