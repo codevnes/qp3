@@ -1,7 +1,8 @@
 # Dependencies
 node_modules/
-custom_modes
-.cursor
+custom_modes/
+memory-bank/
+.cursor/
 npm-debug.log
 yarn-error.log
 yarn-debug.log
