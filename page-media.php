@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Trang liên hệ
+ * Template Name: Trang thư viện
  *
  * @package QP3
  */
