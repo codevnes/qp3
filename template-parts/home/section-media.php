@@ -14,7 +14,7 @@
                 <div class="row justify-content-center">
                     <div class="col-sm-6">
                         <div class="item-media">
-                            <a class="link-media" href="<?php echo esc_url(home_url('/thu-vien-anh/thu-vien-anh/')); ?>">
+                            <a class="link-media" href="<?php echo esc_url(home_url('/thu-vien/')); ?>">
                                 <img class="w-100" src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/uploads/2022/07/tva.jpg" alt="Gallery" />
                                 <span class="icon">
                                     <span class="inner">
@@ -26,7 +26,7 @@
                     </div>
                     <div class="col-sm-6">
                         <div class="item-media">
-                            <a class="link-media" href="<?php echo esc_url(home_url('/thu-vien-video/thu-vien-video/')); ?>">
+                            <a class="link-media" href="<?php echo esc_url(home_url('/thu-vien/')); ?>">
                                 <img class="w-100" src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/uploads/2022/07/tvv.jpg" alt="Gallery" />
                                 <span class="icon">
                                     <span class="inner">
