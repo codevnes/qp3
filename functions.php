@@ -15,6 +15,7 @@ if (!defined('_S_VERSION')) {
  */
 require get_template_directory() . '/inc/post-types/property.php';
 require get_template_directory() . '/inc/media-library.php';
+require get_template_directory() . '/inc/shortcodes.php';
 
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -146,6 +147,8 @@ function QP3_scripts()
 
     // Legacy stylesheet support (can be removed once fully migrated)
     wp_enqueue_style('QP3-style', get_stylesheet_uri(), array(), filemtime(get_stylesheet_directory() . '/style.css'));
+    
+    // Property Type taxonomy stylesheet - removed because it's now in Sass
     
     // Scripts
     wp_enqueue_script('jquery');
