@@ -58,6 +58,24 @@ function qp3_register_image_library_acf_fields() {
         'title' => 'Thư Viện Ảnh',
         'fields' => array(
             array(
+                'key' => 'field_gallery_title',
+                'label' => 'Tiêu đề thư viện',
+                'name' => 'gallery_title',
+                'type' => 'text',
+                'instructions' => 'Nhập tiêu đề hiển thị cho thư viện ảnh',
+                'required' => 0,
+                'default_value' => 'Thư Viện Ảnh',
+                'placeholder' => '',
+                'prepend' => '',
+                'append' => '',
+                'maxlength' => '',
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+            ),
+            array(
                 'key' => 'field_library_images',
                 'label' => 'Hình ảnh',
                 'name' => 'library_images',
@@ -102,6 +120,7 @@ function qp3_register_image_library_acf_fields() {
         'hide_on_screen' => '',
         'active' => true,
         'description' => '',
+        'show_in_rest' => false,
     ));
 }
 add_action('acf/init', 'qp3_register_image_library_acf_fields');
@@ -216,6 +235,7 @@ function qp3_register_video_library_acf_fields() {
         'hide_on_screen' => '',
         'active' => true,
         'description' => '',
+        'show_in_rest' => false,
     ));
 }
 add_action('acf/init', 'qp3_register_video_library_acf_fields'); 

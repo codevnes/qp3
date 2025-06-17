@@ -88,4 +88,66 @@ jQuery(document).ready(function($) {
             });
         }
     }
-}); 
+});
+
+/**
+ * Media Library Gallery initialization
+ */
+(function($) {
+    'use strict';
+
+    // Wait for DOM to be ready
+    $(document).ready(function() {
+        // Check if Fancybox exists before binding
+        if (typeof Fancybox !== 'undefined') {
+            // Initialize Fancybox for gallery items
+            Fancybox.bind('[data-fancybox="gallery"]', {
+                // Custom options
+                dragToClose: false,
+                Toolbar: {
+                    display: [
+                        { id: "prev", position: "center" },
+                        { id: "counter", position: "center" },
+                        { id: "next", position: "center" },
+                        "zoom",
+                        "slideshow",
+                        "fullscreen",
+                        "download",
+                        "close",
+                    ],
+                },
+                Image: {
+                    zoom: true,
+                },
+                Thumbs: {
+                    autoStart: true,
+                }
+            });
+            
+            console.log('Fancybox initialized for gallery');
+        } else {
+            console.error('Fancybox not loaded');
+        }
+    });
+
+    // Debug gallery images
+    if (document.querySelector('.image-gallery')) {
+        console.log('Gallery found');
+        const galleryItems = document.querySelectorAll('.gallery-item img');
+        console.log('Gallery items found:', galleryItems.length);
+        
+        // Check each image source
+        galleryItems.forEach(function(img, index) {
+            console.log('Image ' + index + ' src:', img.getAttribute('src'));
+            
+            // If image src is undefined or empty, add an error class
+            if (!img.getAttribute('src') || img.getAttribute('src') === 'undefined') {
+                img.classList.add('img-error');
+                console.error('Image ' + index + ' has invalid src');
+            }
+        });
+    } else {
+        console.log('No gallery found on page');
+    }
+
+})(jQuery); 

@@ -19,6 +19,7 @@ Common :: Functions
 /*--------------------------------------------------------------
 # Container Width
 --------------------------------------------------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 .container {
   width: 100%;
   padding-right: 15px;
@@ -4634,34 +4635,6 @@ Common :: Functions
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
-@font-face {
-  font-family: "SVN-Gilroy";
-  src: url("./assets/fonts/SVN-GilroyMedium.woff2") format("woff2"), url("./assets/fonts/SVN-GilroyMedium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "SVN-Gilroy";
-  src: url("./assets/fonts/SVN-Gilroy.woff2") format("woff2"), url("./assets/fonts/SVN-Gilroy.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "SVN-Gilroy";
-  src: url("./assets/fonts/SVN-GilroyBold.woff2") format("woff2"), url("./assets/fonts/SVN-GilroyBold.woff") format("woff");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "SVN-Gilroy";
-  src: url("./assets/fonts/SVN-GilroySemiBold.woff2") format("woff2"), url("./assets/fonts/SVN-GilroySemiBold.woff") format("woff");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
 *,
 *:before,
 *:after {
@@ -4670,7 +4643,7 @@ Common :: Functions
 }
 
 body {
-  font-family: "SVN-Gilroy", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Barlow", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 14px;
   line-height: 1.5;
   color: #FFF;
@@ -7638,6 +7611,7 @@ h1.entry-title > span:after {
   }
   .content-menu .logo_mb img {
     max-height: 150px;
+    width: auto;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -11177,6 +11151,119 @@ Common :: Functions
   color: #FFF;
   max-height: 40px;
   overflow: hidden;
+}
+
+.section-images {
+  padding: 60px 0;
+}
+.section-images .section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.section-images .section-title h2 {
+  font-size: 32px;
+  font-weight: 600;
+  position: relative;
+  display: inline-block;
+}
+.section-images .section-title h2:after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background-color: #333;
+}
+.section-images .image-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 25px;
+}
+@media (max-width: 768px) {
+  .section-images .image-gallery {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+  }
+}
+@media (max-width: 480px) {
+  .section-images .image-gallery {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+  }
+}
+.section-images .image-gallery .gallery-item {
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  background-color: #f9f9f9;
+}
+.section-images .image-gallery .gallery-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+.section-images .image-gallery .gallery-item a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+  height: 100%;
+}
+.section-images .image-gallery .gallery-item .img-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+.section-images .image-gallery .gallery-item .img-wrapper:before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+.section-images .image-gallery .gallery-item .img-wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  /* Error handling */
+}
+.section-images .image-gallery .gallery-item .img-wrapper img.img-error, .section-images .image-gallery .gallery-item .img-wrapper img[src=undefined], .section-images .image-gallery .gallery-item .img-wrapper img[src=""] {
+  background-color: #f1f1f1;
+}
+.section-images .image-gallery .gallery-item .img-wrapper img.img-error:after, .section-images .image-gallery .gallery-item .img-wrapper img[src=undefined]:after, .section-images .image-gallery .gallery-item .img-wrapper img[src=""]:after {
+  content: "\f1c5"; /* Image icon from FontAwesome */
+  font-family: "FontAwesome", sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  color: #ccc;
+}
+.section-images .image-gallery .gallery-item:hover .img-wrapper img {
+  transform: scale(1.05);
+}
+.section-images .image-gallery .gallery-item .caption {
+  padding: 10px 15px;
+  font-size: 14px;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-top: 1px solid #eee;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.section-images .no-images {
+  text-align: center;
+  padding: 40px 0;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+.section-images .no-images p {
+  font-size: 16px;
+  color: #666;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -170,10 +170,8 @@ function QP3_scripts()
         wp_enqueue_script('category-js', get_template_directory_uri() . '/assets/js/category.js', array('jquery'), '1.0', true);
     }
     
-    // Media Library page functionality
-    if (is_page_template('page-media-library.php')) {
-        wp_enqueue_script('media-library-js', get_template_directory_uri() . '/assets/js/media-library.js', array('jquery', 'fancybox-js'), '1.0', true);
-    }
+    // Media Library gallery functionality - load on all pages since gallery can be anywhere
+    wp_enqueue_script('media-library-js', get_template_directory_uri() . '/assets/js/media-library.js', array('jquery', 'fancybox-js'), '1.0', true);
 
     // Main script with Ajax support
     wp_enqueue_script('main-js', get_template_directory_uri() . '/assets/js/main.js', array('jquery'), '1.0', true);
