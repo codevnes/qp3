@@ -33,7 +33,7 @@ if (!is_array($images)) {
                     // Get image data - this ensures we have all the correct fields
                     $img_id = $image['id'];
                     $full_url = wp_get_attachment_url($img_id);
-                    $medium_url = wp_get_attachment_image_url($img_id, 'medium');
+                    $large_url = wp_get_attachment_image_url($img_id, 'large');
                     $alt_text = get_post_meta($img_id, '_wp_attachment_image_alt', true);
                     $caption = wp_get_attachment_caption($img_id);
                     
@@ -42,15 +42,15 @@ if (!is_array($images)) {
                         continue;
                     }
                     
-                    // If medium size isn't available, use the full size
-                    if (empty($medium_url)) {
-                        $medium_url = $full_url;
+                    // If large size isn't available, use the full size
+                    if (empty($large_url)) {
+                        $large_url = $full_url;
                     }
                     ?>
                     <div class="gallery-item">
                         <a href="<?php echo esc_url($full_url); ?>" data-fancybox="gallery" data-caption="<?php echo esc_attr($caption ? $caption : ''); ?>">
                             <div class="img-wrapper">
-                                <img src="<?php echo esc_url($medium_url); ?>" alt="<?php echo esc_attr($alt_text); ?>" loading="lazy">
+                                <img src="<?php echo esc_url($large_url); ?>" alt="<?php echo esc_attr($alt_text); ?>" loading="lazy">
                             </div>
                             <?php if(!empty($caption)): ?>
                                 <div class="caption"><?php echo esc_html($caption); ?></div>
