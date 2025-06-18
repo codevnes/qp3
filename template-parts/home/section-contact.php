@@ -37,7 +37,7 @@
                                         <span class="company-card__text">info@qpgroup.vn</span>
                                     </div>
                                 </div>
-                                <div class="company-card__item company-card__item--website"> 
+                                <div class="d-none company-card__item company-card__item--website"> 
                                     <i class="fa-light fa-globe company-card__icon"></i>
                                     <div class="company-card__info">
                                         <span class="company-card__label">Website</span>
